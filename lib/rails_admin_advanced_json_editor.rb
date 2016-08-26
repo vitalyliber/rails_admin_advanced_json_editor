@@ -12,19 +12,12 @@ module RailsAdmin
       module Types
         class AdvancedJsonEditor < RailsAdmin::Config::Fields::Base
           RailsAdmin::Config::Fields::Types::register(self)
+
+          register_instance_option :render do
+            bindings[:view].render partial: "rails_admin/main/form_advanced_json_editor", locals: {field: self, form: bindings[:form]}
+          end
         end
       end
     end
   end
 end
-
-RailsAdmin::Config::Fields.register_factory do |parent, properties, fields|
-  if properties[:name] == :advanced_json_editor
-    fields << RailsAdmin::Config::Fields::Types::AdvancedJsonEditor.new(parent, properties[:name], properties)
-    true
-  else
-    false
-  end
-end
-
-
