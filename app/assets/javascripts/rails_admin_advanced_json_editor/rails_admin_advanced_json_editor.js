@@ -4,17 +4,15 @@
 
 $(function() {
 
-  // editor = new JSONEditor( $('#advanced-json-editor') );
-
-  var editor = new JSONEditor(document.getElementById('advanced-json-editor'),{
+  var editor = new JSONEditor(document.getElementById('advanced-json-editor-form'),{
     theme: 'bootstrap3',
     schema: JSON.parse( $('#advanced-json-editor input').val() )
   });
 
-  // Hook up the submit button to log to the console
-  document.getElementById('submit').addEventListener('click',function() {
-    // Get the value from the editor
-    console.log(editor.getValue());
+  editor.on('change',function() {
+    console.log( editor.getValue() );
+
+    $('#advanced-json-editor input').val( JSON.stringify( editor.getValue() ) );
   });
 
 });
