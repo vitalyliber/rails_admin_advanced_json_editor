@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = RailsAdminAdvancedJsonEditor::VERSION
   s.authors     = ["Vitaly Liber"]
   s.email       = ["liber@sibext.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of RailsAdminAdvancedJsonEditor."
-  s.description = "TODO: Description of RailsAdminAdvancedJsonEditor."
+  s.homepage    = "http://www.sibext.com"
+  s.summary     = "Rails Admin advanced json editor."
+  s.description = "Rails Admin advanced json editor."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
