@@ -1,6 +1,6 @@
 = javascript_include_tag "rails_admin_advanced_json_editor/rails_admin_advanced_json_editor", media: 'all'
 
-#advanced-json-editor
+#advanced-json-editor{style: "display: none"}
   = form.send field.view_helper, field.method_name, field.html_attributes
 
 #advanced-json-editor-form
@@ -8,5 +8,5 @@
 - config = File.join(Rails.root, 'config', 'zw_device.json')
 - contents = File.read(config)
 
-#schema-json
+#schema-json{style: "display: none"}
   %input{value: contents}
