@@ -6,16 +6,8 @@ $(function() {
 
   var editor = new JSONEditor(document.getElementById('advanced-json-editor-form'),{
     theme: 'bootstrap2',
-    schema: {
-      title: "ZW-Device",
-      type: "object",
-      properties: {
-        name: {"type": "string"}
-      }
-    }
+    schema: JSON.parse( $('#schema-json input').val() )
   });
-
-  editor.setValue( JSON.parse( $('#advanced-json-editor input').val() ) );
 
   editor.on('change',function() {
     console.log( editor.getValue() );

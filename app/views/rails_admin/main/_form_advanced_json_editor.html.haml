@@ -4,3 +4,9 @@
   = form.send field.view_helper, field.method_name, field.html_attributes
 
 #advanced-json-editor-form
+
+- config = File.join(Rails.root, 'config', 'zw_device.json')
+- contents = File.read(config)
+
+#schema-json
+  %input{value: contents}
