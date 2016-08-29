@@ -11,7 +11,7 @@ gem 'rails_admin_advanced_json_editor', '0.0.1'
 _Add json_editor to your field:_
 
 ```ruby
-config.model 'ZwDevice' do
+config.model 'ProductInfo' do
     edit do
       field :json, :advanced_json_editor
     end
