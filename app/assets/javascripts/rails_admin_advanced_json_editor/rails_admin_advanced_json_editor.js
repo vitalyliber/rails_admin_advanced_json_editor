@@ -10,6 +10,8 @@ $(function() {
     schema: JSON.parse( $('#schema-json input').val() )
   });
 
+  editor.setValue( JSON.parse( $('#advanced-json-editor input').val() ) );
+
   editor.on('change',function() {
     console.log( editor.getValue() );
 
