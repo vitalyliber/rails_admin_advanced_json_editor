@@ -1,7 +1,5 @@
 //= require rails_admin_advanced_json_editor/lib/jsoneditor
 
-
-
 $(function() {
 
   var editor = new JSONEditor(document.getElementById('advanced-json-editor-form'),{
@@ -10,7 +8,13 @@ $(function() {
     schema: JSON.parse( $('#schema-json input').val() )
   });
 
-  editor.setValue( JSON.parse( $('#advanced-json-editor input').val() ) );
+  var exists_value = $('#advanced-json-editor input').val()
+
+  if (exists_value != "") {
+    exists_value = JSON.parse(exists_value)
+
+    editor.setValue( exists_value );
+  }
 
   editor.on('change',function() {
     console.log( editor.getValue() );
@@ -23,4 +27,3 @@ $(function() {
 
 
 });
-
