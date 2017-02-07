@@ -10,7 +10,9 @@ Example [here](http://jeremydorn.com/json-editor/)
 
 ## _1. put gem to gemfile_
 
+```ruby
 gem 'rails_admin_advanced_json_editor', '0.0.2'
+```
 
 ## _2. Add json_editor to your field_
 
